@@ -25,7 +25,9 @@ namespace profiling_web_app.Controllers
 
         public IActionResult Privacy()
         {
-            return View();
+            Models.Simple s = new Models.Simple();
+
+            return View(s.GetData());
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
